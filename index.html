@@ -8,73 +8,94 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="sequencer">
-      <div class="kick">
-        <div class="kick__controls">
+    <main>
+      <div class="beat">
+        <div class="beat__controls beat__controls--kick">
           <h1>Kick</h1>
-          <button data-track="0" class="mute kick-volume">
+          <button
+            data-track="0"
+            class="beat__controls__mute beat__controls__mute--kick"
+          >
             <i class="fa-solid fa-volume-xmark"></i>
           </button>
-          <select name="kick__select" id="kick-select">
+          <select
+            class="beat__controls__select"
+            name="kick-select"
+            id="kick-select"
+          >
             <option value="sounds/kick-heavy.wav">Classic Kick</option>
             <option value="sounds/kick-808.wav">808 Kick</option>
             <option value="sounds/kick-softy.wav">Kick Heavy</option>
           </select>
         </div>
-        <div class="kick__pads">
-          <div class="kick__pads__pad pad b0"></div>
-          <div class="kick__pads__pad pad b1"></div>
-          <div class="kick__pads__pad pad b2"></div>
-          <div class="kick__pads__pad pad b3"></div>
-          <div class="kick__pads__pad pad b4"></div>
-          <div class="kick__pads__pad pad b5"></div>
-          <div class="kick__pads__pad pad b6"></div>
-          <div class="kick__pads__pad pad b7"></div>
+        <div class="pads">
+          <div class="pads__pad--kick pads__pad b0"></div>
+          <div class="pads__pad--kick pads__pad b1"></div>
+          <div class="pads__pad--kick pads__pad b2"></div>
+          <div class="pads__pad--kick pads__pad b3"></div>
+          <div class="pads__pad--kick pads__pad b4"></div>
+          <div class="pads__pad--kick pads__pad b5"></div>
+          <div class="pads__pad--kick pads__pad b6"></div>
+          <div class="pads__pad--kick pads__pad b7"></div>
         </div>
       </div>
-      <div class="hihat">
-        <div class="hihat__controls">
+      <div class="beat">
+        <div class="beat__controls beat__controls--hihat">
           <h1>Hihat</h1>
-          <button data-track="1" class="mute hihat-volume">
+          <button
+            data-track="1"
+            class="beat__controls__mute beat__controls__mute--hihat"
+          >
             <i class="fa-solid fa-volume-xmark"></i>
           </button>
-          <select name="hihat__select" id="hihat-select">
+          <select
+            class="beat__controls__select"
+            name="hihat-select"
+            id="hihat-select"
+          >
             <option value="sounds/hihat-acoustic.wav">Acoustic Hihat</option>
             <option value="sounds/hihat-808.wav">808 Hihat</option>
           </select>
         </div>
-        <div class="hihat__pads">
-          <div class="hihat__pads__pad pad b0"></div>
-          <div class="hihat__pads__pad pad b1"></div>
-          <div class="hihat__pads__pad pad b2"></div>
-          <div class="hihat__pads__pad pad b3"></div>
-          <div class="hihat__pads__pad pad b4"></div>
-          <div class="hihat__pads__pad pad b5"></div>
-          <div class="hihat__pads__pad pad b6"></div>
-          <div class="hihat__pads__pad pad b7"></div>
+        <div class="pads">
+          <div class="pads__pad--hihat pads__pad b0"></div>
+          <div class="pads__pad--hihat pads__pad b1"></div>
+          <div class="pads__pad--hihat pads__pad b2"></div>
+          <div class="pads__pad--hihat pads__pad b3"></div>
+          <div class="pads__pad--hihat pads__pad b4"></div>
+          <div class="pads__pad--hihat pads__pad b5"></div>
+          <div class="pads__pad--hihat pads__pad b6"></div>
+          <div class="pads__pad--hihat pads__pad b7"></div>
         </div>
       </div>
-      <div class="snare">
-        <div class="snare__controls">
+      <div class="beat">
+        <div class="beat__controls beat__controls--snare">
           <h1>Snare</h1>
-          <button data-track="2" class="mute snare-volume">
+          <button
+            data-track="2"
+            class="beat__controls__mute beat__controls__mute--snare"
+          >
             <i class="fa-solid fa-volume-xmark"></i>
           </button>
-          <select name="snare__select" id="snare-select">
+          <select
+            class="beat__controls__select"
+            name="snare-select"
+            id="snare-select"
+          >
             <option value="sounds/snare-acoustic.wav">Acoustic Snare</option>
             <option value="sounds/snare-808.wav">808 Snare</option>
             <option value="sounds/snare-vinyl.wav">Snare Vinyl</option>
           </select>
         </div>
-        <div class="snare__pads">
-          <div class="snare__pads__pad pad b0"></div>
-          <div class="snare__pads__pad pad b1"></div>
-          <div class="snare__pads__pad pad b2"></div>
-          <div class="snare__pads__pad pad b3"></div>
-          <div class="snare__pads__pad pad b4"></div>
-          <div class="snare__pads__pad pad b5"></div>
-          <div class="snare__pads__pad pad b6"></div>
-          <div class="snare__pads__pad pad b7"></div>
+        <div class="pads">
+          <div class="pads__pad--snare pads__pad b0"></div>
+          <div class="pads__pad--snare pads__pad b1"></div>
+          <div class="pads__pad--snare pads__pad b2"></div>
+          <div class="pads__pad--snare pads__pad b3"></div>
+          <div class="pads__pad--snare pads__pad b4"></div>
+          <div class="pads__pad--snare pads__pad b5"></div>
+          <div class="pads__pad--snare pads__pad b6"></div>
+          <div class="pads__pad--snare pads__pad b7"></div>
         </div>
       </div>
       <button class="play"><i class="fa-solid fa-play"></i></button>
