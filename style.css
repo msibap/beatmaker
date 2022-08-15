@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +7,143 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Cairo", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1rem;
+}
+
+.beat {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  flex-direction: row;
+}
+@media only screen and (max-width: 650px) {
+  .beat {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.beat__controls {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 12rem);
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 8px;
+}
+@media only screen and (max-width: 650px) {
+  .beat__controls {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.beat__controls h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  background-color: wheat;
+  border-radius: 4px;
+}
+.beat__controls__mute {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(247, 232, 206);
+  color: #bbb;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  grid-row: auto;
+  margin: 5px;
+}
+.beat__controls__mute.active {
+  background-color: wheat;
+  color: black;
+}
+@media only screen and (max-width: 1000px) {
+  .beat__controls__mute {
+    grid-row: span 2;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .beat__controls__mute {
+    grid-row: auto;
+  }
+}
+.beat__controls__select {
+  height: 4rem;
+  width: 100%;
+  background-color: wheat;
+  font-family: inherit;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+}
+
+.pads {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+.pads__pad {
+  height: 5.5rem;
+  width: 5.5rem;
+  margin: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.pads__pad--kick {
+  background-color: #ffedcc;
+}
+.pads__pad--kick.active {
+  background-color: orange;
+}
+.pads__pad--hihat {
+  background-color: #efc8ff;
+}
+.pads__pad--hihat.active {
+  background-color: rgb(196, 47, 255);
+}
+.pads__pad--snare {
+  background-color: #c1dcff;
+}
+.pads__pad--snare.active {
+  background-color: rgb(40, 133, 255);
+}
+@media only screen and (max-width: 650px) {
+  .pads__pad {
+    height: 4rem;
+    width: 4rem;
+    margin: 0.2rem;
+  }
+}
+
+.play {
+  width: 4rem;
+  height: 4rem;
+  background-color: wheat;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.play svg {
+  transform: translateX(2px);
 }/*# sourceMappingURL=style.css.map */
