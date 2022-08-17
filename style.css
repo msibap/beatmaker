@@ -136,20 +136,17 @@ main {
 }
 
 .play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 4rem;
   height: 4rem;
   background-color: wheat;
   border-radius: 50%;
   border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 2rem;
   cursor: pointer;
   margin: 2rem;
-}
-.play svg {
-  transform: translateX(2px);
 }
 
 @-webkit-keyframes playTrack {
