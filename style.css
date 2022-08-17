@@ -57,6 +57,7 @@ main {
   height: 4rem;
   background-color: wheat;
   border-radius: 4px;
+  cursor: default;
 }
 .beat__controls__mute {
   width: 3rem;
