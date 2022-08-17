@@ -14,7 +14,7 @@ class DrumKit {
     this.index = 0;
     this.bpm = 150; //Beat Per Minute
     this.isPlaying = null;
-    this.volume = 0.3;
+    this.volume = 0.25;
   }
 
   repeat() {
