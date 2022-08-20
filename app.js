@@ -11,6 +11,8 @@ class DrumKit {
     this.beats = document.querySelectorAll(".beat");
     this.playBtn = document.querySelector(".play");
     this.muteBtn = document.querySelectorAll(".beat__controls__mute");
+    this.tempo = document.querySelector(".tempo");
+    this.tempoText = document.querySelector(".tempo__text");
     this.index = 0;
     this.bpm = 150; //Beat Per Minute
     this.isPlaying = null;
@@ -105,12 +107,26 @@ class DrumKit {
     this.hihatAudio.volume = this.volume;
     this.snareAudio.volume = this.volume;
   }
+
+  updateTempo() {
+    if (!this.isPlaying) return; // Not auto-playing when setting Tempo
+    clearInterval(this.isPlaying);
+    this.isPlaying = null;
+    this.start();
+  }
+
+  updateTempoText() {
+    this.bpm = this.tempo.value;
+    this.tempoText.innerText = `Tempo: ${drumKit.bpm}`;
+  }
 }
 
 const drumKit = new DrumKit();
 
 // Lowering initial audio volume
 drumKit.normalVolume();
+// Updating Tempo Text at first
+drumKit.updateTempoText();
 
 // EVENT LISTENERS
 
@@ -130,22 +146,22 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// drumKit.muteBtn.forEach((btn) => {
-//   btn.addEventListener("click", function (e) {
-//     console.log(
-//       e.target.closest(".beat__controls__mute").getAttribute("data-track")
-//     );
-//   });
-// });
-
 // Select eventListener
 window.addEventListener("change", function (e) {
-  const selection = e.target.closest(".beat__controls__select");
-  drumKit.changeSound(selection);
+  // Changing Sound on select
+  if (e.target.closest(".beat__controls__select"))
+    drumKit.changeSound(e.target);
+  // Updating Tempo on drag
+  if (e.target.closest(".tempo")) drumKit.updateTempo();
 });
 
 // Reseting the animations after final pad
 window.addEventListener("animationend", function (e) {
   const test = e.target.closest(".pads__pad");
   test.style.animation = "";
+});
+
+drumKit.tempo.addEventListener("input", function () {
+  // Updating Tempo Text
+  drumKit.updateTempoText();
 });
