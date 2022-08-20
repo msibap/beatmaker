@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
 
+$color-orange: rgb(255, 165, 0);
+$color-purple: rgb(196, 47, 255);
+$color-blue: rgb(40, 133, 255);
+
 * {
   margin: 0;
   padding: 0;
@@ -92,6 +96,10 @@ main {
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      transition: all 0.3s ease-out;
+      &:hover {
+        background-color: darken(wheat, 10%);
+      }
     }
   }
 }
@@ -111,23 +119,41 @@ main {
     transition: all 0.3s ease-out;
 
     &--kick {
-      background-color: lighten(orange, 40%);
+      background-color: lighten($color-orange, 40%);
       &.active {
-        background-color: orange;
+        background-color: $color-orange;
+      }
+      &:hover {
+        background-color: lighten($color-orange, 20%);
+      }
+      &:hover.active {
+        background-color: $color-orange;
       }
     }
 
     &--hihat {
-      background-color: lighten(rgb(196, 47, 255), 30%);
+      background-color: lighten($color-purple, 30%);
       &.active {
-        background-color: rgb(196, 47, 255);
+        background-color: $color-purple;
+      }
+      &:hover {
+        background-color: lighten($color-purple, 15%);
+      }
+      &:hover.active {
+        background-color: $color-purple;
       }
     }
 
     &--snare {
-      background-color: lighten(rgb(40, 133, 255), 30%);
+      background-color: lighten($color-blue, 30%);
       &.active {
-        background-color: rgb(40, 133, 255);
+        background-color: $color-blue;
+      }
+      &:hover {
+        background-color: lighten($color-blue, 15%);
+      }
+      &:hover.active {
+        background-color: $color-blue;
       }
     }
 
@@ -151,6 +177,30 @@ main {
   font-size: 2rem;
   cursor: pointer;
   margin: 2rem;
+  transition: all 0.2s ease-out;
+  &:hover {
+    background-color: darken(wheat, 10%);
+  }
+}
+
+.tempo {
+  -webkit-appearance: none;
+  max-width: 70rem;
+  width: 50%;
+  padding: 0.5rem 1rem;
+  background-color: wheat;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background-color: darken(wheat, 10%);
+  }
+
+  &__text {
+    font-size: 2rem;
+  }
 }
 
 @keyframes playTrack {

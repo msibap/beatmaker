@@ -94,6 +94,10 @@ main {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.beat__controls__select:hover {
+  background-color: #efca86;
 }
 
 .pads {
@@ -114,7 +118,13 @@ main {
   background-color: #ffedcc;
 }
 .pads__pad--kick.active {
-  background-color: orange;
+  background-color: rgb(255, 165, 0);
+}
+.pads__pad--kick:hover {
+  background-color: #ffc966;
+}
+.pads__pad--kick:hover.active {
+  background-color: rgb(255, 165, 0);
 }
 .pads__pad--hihat {
   background-color: #efc8ff;
@@ -122,10 +132,22 @@ main {
 .pads__pad--hihat.active {
   background-color: rgb(196, 47, 255);
 }
+.pads__pad--hihat:hover {
+  background-color: #da7cff;
+}
+.pads__pad--hihat:hover.active {
+  background-color: rgb(196, 47, 255);
+}
 .pads__pad--snare {
   background-color: #c1dcff;
 }
 .pads__pad--snare.active {
+  background-color: rgb(40, 133, 255);
+}
+.pads__pad--snare:hover {
+  background-color: #75b0ff;
+}
+.pads__pad--snare:hover.active {
   background-color: rgb(40, 133, 255);
 }
 @media only screen and (max-width: 650px) {
@@ -148,6 +170,28 @@ main {
   font-size: 2rem;
   cursor: pointer;
   margin: 2rem;
+  transition: all 0.2s ease-out;
+}
+.play:hover {
+  background-color: #efca86;
+}
+
+.tempo {
+  -webkit-appearance: none;
+  max-width: 70rem;
+  width: 50%;
+  padding: 0.5rem 1rem;
+  background-color: wheat;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.tempo:hover {
+  background-color: #efca86;
+}
+.tempo__text {
+  font-size: 2rem;
 }
 
 @-webkit-keyframes playTrack {

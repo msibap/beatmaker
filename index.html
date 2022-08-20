@@ -20,9 +20,10 @@
             name="kick-select"
             id="kick-select"
           >
-            <option value="sounds/kick-heavy.wav">Classic Kick</option>
+            <option value="sounds/kick-classic.wav">Classic Kick</option>
             <option value="sounds/kick-808.wav">808 Kick</option>
-            <option value="sounds/kick-softy.wav">Kick Heavy</option>
+            <option value="sounds/kick-heavy.wav">Kick Heavy</option>
+            <option value="sounds/kick-softy.wav">Kick Softy</option>
           </select>
         </div>
         <div class="pads">
@@ -93,6 +94,8 @@
       <audio class="kick-sound" src="sounds/kick-classic.wav"></audio>
       <audio class="hihat-sound" src="sounds/hihat-acoustic.wav "></audio>
       <audio class="snare-sound" src="sounds/snare-acoustic.wav"></audio>
+      <input class="tempo" type="range" min="100" max="400" value="250" />
+      <p class="tempo__text"></p>
     </main>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
